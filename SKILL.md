@@ -1,0 +1,158 @@
+---
+name: PR Butler
+description: Automate comprehensive pre-commit / PR preparation — translations, code cleanup, tests, documentation, and quality gates.
+---
+
+## Overview
+
+The PR Butler automates the complete pre-commit checklist for web projects, ensuring code is ship-ready before PR submission. It orchestrates translation fixes, code cleanup, test generation, documentation updates, and quality validation in a single pass.
+
+### When to Invoke
+
+- User runs "prepare for PR" or "pre-commit check"
+- User asks to "fix the scaffold" or "make this PR-ready"
+- Before any pull request submission
+
+---
+
+## Instructions
+
+<!-- 
+  YOUR TASK: Fill in the detailed step-by-step instructions for each of the 6 steps below.
+  Each step should tell the AI agent exactly what to do, what files to touch, 
+  and what output to produce. Be specific — vague instructions produce vague results.
+-->
+
+### Step 1: Translation Detection & Fix
+
+<!-- Describe how to detect missing French translations and generate them -->
+
+### Step 2: Code Cleanup
+
+<!-- Describe how to format code and fix lint violations -->
+
+### Step 3: Test Automation
+
+<!-- Describe how to run tests, generate missing test cases, achieve >80% coverage -->
+
+### Step 4: Documentation Updates
+
+<!-- Describe how to add docstrings, update README.md, generate CHANGELOG.md and PR_REQUEST.md -->
+
+### Step 5: Quality Gates
+
+<!-- Describe the quality gates to enforce before proceeding -->
+
+### Step 6: PR Preparation
+
+<!-- Describe how to generate the conventional commit message and finalize deliverables -->
+
+---
+
+## Examples
+
+<!-- 
+  YOUR TASK: Provide at least 2 example scenarios showing input and expected output.
+  Example: "Make the scaffold PR-ready" → what the agent reports at each step.
+-->
+
+### Example 1: Full PR Preparation
+
+**Input:** "Make the scaffold PR-ready"
+
+**Expected output:**
+
+```
+<!-- Fill in the expected step-by-step output -->
+```
+
+### Example 2: Translation-Only Run
+
+**Input:** "Fix the missing French translations"
+
+**Expected output:**
+
+```
+<!-- Fill in the expected output -->
+```
+
+---
+
+## Success Criteria
+
+<!-- 
+  YOUR TASK: Define the checklist the agent uses to verify everything passed.
+  At minimum, cover all 6 steps.
+-->
+
+- [ ] All 14 French translation keys present in `fr.json`
+- [ ] Code formatted consistently
+- [ ] No lint violations
+- [ ] Test coverage ≥ 80%
+- [ ] All tests pass
+- [ ] JSDoc/TSDoc on all public functions
+- [ ] `README.md` has Features, Testing, and Contributing sections
+- [ ] `CHANGELOG.md` generated
+- [ ] `PR_REQUEST.md` generated with summary and checklist
+- [ ] Conventional commit message prepared
+
+---
+
+<!-- ⚠️ DO NOT MODIFY ANYTHING BELOW THIS LINE ⚠️ -->
+<!-- ================================================ -->
+<!-- REPORT CARD — Auto-grading step                  -->
+<!-- This step runs automatically after your Skill    -->
+<!-- completes. It generates a progress report card   -->
+<!-- so you can track how well your Skill is doing.   -->
+<!-- ================================================ -->
+
+## Step 7: Report Card (Do Not Modify)
+
+After completing all steps above, generate a **Report Card** summarizing the results. Output the report card in the following exact format:
+
+```
+═══════════════════════════════════════════════
+  PR BUTLER — REPORT CARD
+═══════════════════════════════════════════════
+
+  📋 Step 1: Translation Detection & Fix
+     Status:  [PASS / FAIL]
+     Details: [X of 14 French keys added to fr.json]
+
+  📋 Step 2: Code Cleanup
+     Status:  [PASS / FAIL]
+     Details: [X files formatted, X lint violations fixed]
+
+  📋 Step 3: Test Automation
+     Status:  [PASS / FAIL]
+     Details: [Coverage: X% → Y%, X new test cases added]
+
+  📋 Step 4: Documentation Updates
+     Status:  [PASS / FAIL]
+     Details: [X functions documented, README updated: Y/N,
+               CHANGELOG.md: Y/N, PR_REQUEST.md: Y/N]
+
+  📋 Step 5: Quality Gates
+     Status:  [PASS / FAIL]
+     Details: [Coverage ≥ 80%: Y/N, Lint clean: Y/N,
+               All tests pass: Y/N]
+
+  📋 Step 6: PR Preparation
+     Status:  [PASS / FAIL]
+     Details: [Commit message: Y/N, PR_REQUEST.md finalized: Y/N]
+
+  ─────────────────────────────────────────────
+  OVERALL:   [X / 6 steps passed]
+  GRADE:     [A / B / C / F]
+             A = 6/6 passed
+             B = 5/6 passed
+             C = 4/6 passed
+             F = 3 or fewer passed
+═══════════════════════════════════════════════
+```
+
+**Grading rules:**
+- A step passes only if ALL its success criteria are met
+- Do not skip any step in the report — mark it FAIL if not attempted
+- Be honest in the details — the evaluator will verify against actual file contents
+- Output this report card as the very last thing your Skill does
